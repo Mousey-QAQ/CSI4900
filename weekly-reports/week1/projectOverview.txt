@@ -1,0 +1,49 @@
+### Project Workflow Overview
+
+This project will develop a real-time Edge AI anomaly-detection system running on a Raspberry Pi 4 using QNX.
+
+The system will monitor data coming from a sensor, embedded device, recorded dataset, or simulated data source. The data will represent the operating condition of a physical or embedded system. Possible signals may include temperature, vibration, electrical current, voltage, pressure, rotational speed, or system-performance indicators.
+
+At the beginning of the project, suitable signals will be selected based on the chosen application scenario and the available data source. The selected signals should provide useful information about whether the system is operating normally or showing unusual behavior.
+
+The main goal is to collect the measurements, preprocess the data, and use an **AI-based machine-learning model** to determine whether the system is operating normally or abnormally.
+
+### General Workflow
+
+Sensor / Data Source  
+↓  
+Data Collection  
+↓  
+Data Preprocessing  
+↓  
+AI / Machine-Learning Model  
+↓  
+Normal / Abnormal Detection  
+↓  
+Alert + Logging  
+↓  
+Performance Evaluation
+
+The first stage of the system is **data collection**. Measurements will be obtained from physical sensors, an embedded platform, a recorded dataset, or realistic simulated data.
+
+The next stage is **data preprocessing**. The incoming measurements may need to be cleaned, normalized, scaled, or organized into a suitable format before they are passed to the AI model.
+
+The **AI component** is responsible for analyzing the processed data and identifying patterns in the measurements. A lightweight machine-learning model will be trained using example data so that it can learn the difference between normal and abnormal system behavior.
+
+During operation, new measurements will be sent to the trained AI model. The model will generate a prediction indicating whether the current behavior is normal or whether it should be classified as an anomaly.
+
+During **normal operation**, the sensor measurements should follow expected patterns. Small changes may occur, but the overall behavior should remain consistent with normal system operation.
+
+During **abnormal operation**, one or more measurements may show unusual behavior. This could include sudden changes, unexpected patterns, sustained abnormal values, noisy measurements, or other behavior that differs from normal operating conditions.
+
+If the AI model detects abnormal behavior, the system will generate an **alert** and record the event using structured logging. The log may include information such as the time of the anomaly, the sensor measurements, the detected status, and an anomaly score or confidence value when available.
+
+The final system will run on a **Raspberry Pi 4 using QNX**. QNX will receive the data, perform preprocessing, execute or coordinate the AI inference, detect anomalies, generate alerts, and record system events.
+
+The project will also evaluate both the **AI performance** and the **real-time edge-system performance**.
+
+AI performance will include measurements such as accuracy, precision, recall, F1-score, false-positive rate, and false-negative rate.
+
+The real-time and embedded performance will include measurements such as inference time, total detection latency, CPU utilization, memory utilization, throughput, and system responsiveness.
+
+The overall objective is to create an AI-based anomaly-detection system that can accurately recognize abnormal behavior while remaining lightweight enough to operate efficiently on a Raspberry Pi 4 running QNX.
