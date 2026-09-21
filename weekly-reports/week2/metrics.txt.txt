@@ -1,0 +1,41 @@
+### Why the Dataset Was Chosen
+
+The **MetroPT-3 dataset** was selected because it is a large, well-documented industrial dataset collected from a real air-compressor system used in a metro train. It contains more than **1.5 million observations** and includes **15 different sensor and control signals**. These signals include measurements such as pressure, motor current, oil temperature, and different compressor operating states. 
+
+This dataset is suitable for the project because it represents real physical equipment and contains multiple signals that can be used to study abnormal system behavior. The large number of observations also makes it suitable for training and comparing different machine-learning models.
+
+Another reason for choosing MetroPT-3 is that the signals are clearly documented, which makes the dataset easier to understand and explain in the final report. The dataset also includes known failure periods that can be used to identify abnormal operating conditions. 
+
+MetroPT-3 is a good match for this project because the final goal is to use sensor data to detect abnormal system behavior and later deploy a lightweight anomaly-detection model on a Raspberry Pi 4 running QNX.
+
+### Evaluation Metrics
+
+The project will evaluate both the **machine-learning performance** and the **real-time system performance**.
+
+#### Machine-Learning Metrics
+
+**Accuracy**  
+Accuracy measures the percentage of predictions that are classified correctly.
+
+**Precision**  
+Precision measures how many samples predicted as abnormal are actually abnormal. A high precision means the system produces fewer false alarms.
+
+**Recall**  
+Recall measures how many actual abnormal conditions are successfully detected by the model. This is important because the system should not miss real anomalies.
+
+**F1-Score**  
+The F1-score combines precision and recall into one value. It is useful when the dataset contains more normal samples than abnormal samples.
+
+**False-Positive Rate**  
+The false-positive rate measures how often normal behavior is incorrectly classified as abnormal.
+
+**False-Negative Rate**  
+The false-negative rate measures how often abnormal behavior is incorrectly classified as normal.
+
+**Confusion Matrix**  
+A confusion matrix will be used to show the number of correct and incorrect predictions, including true positives, true negatives, false positives, and false negatives.
+
+#### Real-Time and Edge Performance Metrics
+
+**Inference Time**  
+Inference time measures how long the AI model takes to produce a prediction after
