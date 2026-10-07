@@ -1,0 +1,35 @@
+{
+  "source": "C:\\Users\\32828\\Documents\\GitHub\\CSI4900\\weekly-reports\\week2\\MetroPT3(AirCompressor).csv",
+  "retained_columns": [
+    "timestamp",
+    "Oil_temperature",
+    "Motor_current",
+    "TP2"
+  ],
+  "cleaning_policy": "Removed source index/unused columns, invalid rows, and exact adjacent duplicates; retained physical units; no scaling applied.",
+  "split_policy": "Chronological, non-shuffled 70% train / 15% validation / 15% test to avoid future-data leakage in this time-series dataset.",
+  "statistics": {
+    "source_rows": 1516948,
+    "rows_dropped_missing_or_invalid": 0,
+    "exact_adjacent_duplicate_rows_dropped": 0,
+    "out_of_order_timestamps": 0
+  },
+  "clean_rows": 1516948,
+  "splits": {
+    "train": {
+      "rows": 1061863,
+      "start_timestamp": "2020-02-01 00:00:00",
+      "end_timestamp": "2020-06-29 16:18:07"
+    },
+    "validation": {
+      "rows": 227542,
+      "start_timestamp": "2020-06-29 16:18:17",
+      "end_timestamp": "2020-07-31 02:04:17"
+    },
+    "test": {
+      "rows": 227543,
+      "start_timestamp": "2020-07-31 02:04:27",
+      "end_timestamp": "2020-09-01 03:59:50"
+    }
+  }
+}
